@@ -1,5 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Chart } from 'react-chartjs-2';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,30 +9,41 @@ import {
   PointElement,
   LineElement,
   BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
   Title,
   Tooltip,
   Legend,
-  ArcElement,
-  RadialLinearScale,
-  Filler
+  Colors
 } from 'chart.js';
-import { Chart } from 'react-chartjs-2';
 
-// Register Chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,
   PointElement,
   LineElement,
   BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
   Title,
   Tooltip,
   Legend,
-  ArcElement,
-  RadialLinearScale,
-  Filler
+  Colors
 );
-
 interface ColumnSelectorProps {
   columns: string[];
   selectedColumns: string[];

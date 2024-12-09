@@ -10,6 +10,53 @@ import { FileWithPreview, ProcessedFileData } from '../types/fileTypes';
 import { processFiles } from '../utils/fileProcessing';
 import { analyzeData, AnalysisResult } from '../services/aiService';
 
+
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Colors
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Colors
+);
+
+
+
 const DataUpload: React.FC = () => {
   const [files, setFiles] = useState<FileWithPreview[]>([]);
   const [processedData, setProcessedData] = useState<ProcessedFileData[]>([]);

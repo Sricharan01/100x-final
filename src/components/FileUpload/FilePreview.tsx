@@ -2,6 +2,49 @@ import React from 'react';
 import { FileWithPreview } from '../../types/fileTypes';
 import { X, FileText, FileSpreadsheet } from 'lucide-react';
 
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Colors
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Colors
+);
+
 interface FilePreviewProps {
   files: FileWithPreview[];
   onRemove: (index: number) => void;

@@ -1,6 +1,49 @@
 import React from 'react';
 import { BarChart2, LineChart, PieChart, ScatterChart } from 'lucide-react';
 
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Colors
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  BarController,
+  PieController,
+  LineController,
+  ScatterController,
+  RadarController,
+  BarController,
+  BubbleController, 
+  ArcElement,
+  RadialLinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  Colors
+);
+
 interface ChartTypeSelectorProps {
   selectedType: string;
   onTypeSelect: (type: string) => void;
